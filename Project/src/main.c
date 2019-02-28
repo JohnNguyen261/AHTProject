@@ -3,7 +3,7 @@
 //#include "stm32f4xx_conf.h"
 //#include "stm32f4xx_gpio.h"
 
-/*Definisi pin I/O*/
+/*Define pin I/O*/
 #define PORTLed				GPIOA
 #define PORTButton		GPIOE
 #define LedHijau			GPIO_Pin_6	
@@ -34,7 +34,7 @@ void SysTick_Handler()
 void init_GPIO()
 {
 	/*setting PORT Led*/
-	/* enable GPIOD (PORT yang terpasang led)*/
+	/* enable GPIOD (PORT led)*/
   RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 	/* set PD12, PD13, PD14 and PD15 in menjadi output mode push pull */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_5;
@@ -45,7 +45,7 @@ void init_GPIO()
   GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 	/*setting PORT User Button*/
-	/* enable GPIOD (PORT yang terpasang led)*/
+	/* enable GPIOD (PORT led)*/
   RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
@@ -56,14 +56,14 @@ void init_GPIO()
 
 int main(){
 	
-	/*--------------------------Inisialisasi Clock------------------------------*/
+	/*--------------------------Initialize Clock------------------------------*/
 	SystemCoreClockUpdate();                      /* Get Core Clock Frequency   */
   if (SysTick_Config(SystemCoreClock / 1000)) { /* SysTick 1 msec interrupts  */
     while (1);                                  /* Capture error              */
   }
 	
-	/*---------------Inisialisasi Periperal yang akan digunakan-----------------*/
-	init_GPIO();																	/* inisialisasi GPIO					*/
+	/*---------------Initialize Peripheral-----------------*/
+	init_GPIO();																	/* Initialize GPIO					*/
 	while(1){
 		GPIO_SetBits(PORTLed,GPIO_Pin_1);
 		delay_ms(500);
