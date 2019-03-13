@@ -1,0 +1,5 @@
+--create ..\Output\LED_Register.lib
+..\output\delay.o
+..\output\main.o
+..\output\stm32f4xx_gpio.o
+..\output\stm32f4xx_rcc.o
