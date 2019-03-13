@@ -1,0 +1,10 @@
+/************Phuoc - 13 03 2019 *************/
+/*
+	Blink LED: OK
+	
+	Button:
+		GPIOE->IDR = 0xffffffff; //Em check lại thanh ghi này có cho ghi không nhé :D Read only
+		Còn lại ok. chỉ bài đầu dùng thanh ghi thôi. mấy bài sau e hiểu nguyên lý dùng luôn API cho khỏe.
+	Goodluck
+*/
+/************Phuoc - 13 03 2019 *************/

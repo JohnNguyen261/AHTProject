@@ -1,0 +1,13 @@
+/************Phuoc - 13 03 2019 *************/
+/*Note bài tập nút nhấn
+Anh chưa biết nó chạy được hay không nhưng anh có 1 số góp ý
+
+		GPIOE->PUPDR=0x55555555; //Chỉ nên set mỗi nút nhấn của mình ở chế độ push pull. những bit còn lại để mặc định
+		
+		GPIOA->ODR|=0x00000080;//
+		GPIOA->ODR|=0x00000040;// set 2 loại này trên cùng 1 dòng lệnh. Tự tính giá trị để gán vào ODR register
+		
+		if(!(GPIOE->IDR& 0x00000008))
+		if(!(GPIOE->IDR& 0x00000010)) // 2 hàng này cũng không hợp lý. Đọc thêm API GPIO_ReadInputDataBit để hiểu cần phải làm gì
+									// để sửa 2 hàng này. Có thể dùng API cho nút nhấn */
+/************Phuoc - 13 03 2019 *************/
