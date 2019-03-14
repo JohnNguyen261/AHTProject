@@ -1,0 +1,43 @@
+Dependencies for Project 'Blinky', Target 'Blinky': (DO NOT MODIFY !)
+F (.\src\delay.c)(0x00000000)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I.\interrupts\Project\inc -I.\interrupts\Project\src -I.\interrupts\STM32F4xx_StdPeriph_Driver -I.\interrupts\STM32F4xx_StdPeriph_Driver\inc -I.\interrupts\STM32F4xx_StdPeriph_Driver\src-I C:\Users\admin\Desktop\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DHSE_VALUE="8000000"-o .\interrupts\output\delay.o --omf_browse .\interrupts\output\delay.crf --depend .\interrupts\output\delay.d)
+F (.\src\main.c)(0x00000000)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I.\interrupts\Project\inc -I.\interrupts\Project\src -I.\interrupts\STM32F4xx_StdPeriph_Driver -I.\interrupts\STM32F4xx_StdPeriph_Driver\inc -I.\interrupts\STM32F4xx_StdPeriph_Driver\src-I C:\Users\admin\Desktop\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DHSE_VALUE="8000000"-o .\interrupts\output\main.o --omf_browse .\interrupts\output\main.crf --depend .\interrupts\output\main.d)
+F (.\inc\delay.h)(0x00000000)()
+F (..\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c)(0x00000000)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I.\interrupts\Project\inc -I.\interrupts\Project\src -I.\interrupts\STM32F4xx_StdPeriph_Driver -I.\interrupts\STM32F4xx_StdPeriph_Driver\inc -I.\interrupts\STM32F4xx_StdPeriph_Driver\src-I C:\Users\admin\Desktop\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DHSE_VALUE="8000000"-o .\interrupts\output\stm32f4xx_gpio.o --omf_browse .\interrupts\output\stm32f4xx_gpio.crf --depend .\interrupts\output\stm32f4xx_gpio.d)
+F (..\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c)(0x00000000)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I.\interrupts\Project\inc -I.\interrupts\Project\src -I.\interrupts\STM32F4xx_StdPeriph_Driver -I.\interrupts\STM32F4xx_StdPeriph_Driver\inc -I.\interrupts\STM32F4xx_StdPeriph_Driver\src-I C:\Users\admin\Desktop\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DHSE_VALUE="8000000"-o .\interrupts\output\stm32f4xx_rcc.o --omf_browse .\interrupts\output\stm32f4xx_rcc.crf --depend .\interrupts\output\stm32f4xx_rcc.d)
+F (RTE\Device\STM32F407VETx\startup_stm32f407xx.s)(0x5A8FA174)(--cpu Cortex-M4.fp -g --apcs=interwork -I C:\Users\admin\Desktop\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 517" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list .\listings\startup_stm32f407xx.lst --xref -o .\interrupts\output\startup_stm32f407xx.o --depend .\interrupts\output\startup_stm32f407xx.d)
+F (RTE\Device\STM32F407VETx\system_stm32f4xx.c)(0x5A8FA174)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I.\interrupts\Project\inc -I.\interrupts\Project\src -I.\interrupts\STM32F4xx_StdPeriph_Driver -I.\interrupts\STM32F4xx_StdPeriph_Driver\inc -I.\interrupts\STM32F4xx_StdPeriph_Driver\src-I C:\Users\admin\Desktop\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DHSE_VALUE="8000000"-o .\interrupts\output\system_stm32f4xx.o --omf_browse .\interrupts\output\system_stm32f4xx.crf --depend .\interrupts\output\system_stm32f4xx.d)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\stm32f4xx.h)(0x5C865D1F)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h)(0x5B617E94)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DBFE70)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F4CA4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5851D6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617E94)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\mpu_armv7.h)(0x5B617E94)
+I (C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5A8FA174)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\stm32f4xx_conf.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5C865D1F)
+I (.\interrupts\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5C865D1F)
