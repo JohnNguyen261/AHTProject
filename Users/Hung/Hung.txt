@@ -3,3 +3,10 @@
 	OK
 */
 /************Phuoc - 13 03 2019 *************/
+
+/************Phuoc - 15 03 2019 *************/
+/* Interrupt
+	Config IO: Những chân IO config cùng thuộc tính như In, out thì set 1 lần cho nó gọn code
+	Còn lại OK
+*/
+/************Phuoc - 15 03 2019 *************/

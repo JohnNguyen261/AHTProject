@@ -11,3 +11,15 @@ Anh chưa biết nó chạy được hay không nhưng anh có 1 số góp ý
 		if(!(GPIOE->IDR& 0x00000010)) // 2 hàng này cũng không hợp lý. Đọc thêm API GPIO_ReadInputDataBit để hiểu cần phải làm gì
 									// để sửa 2 hàng này. Có thể dùng API cho nút nhấn */
 /************Phuoc - 13 03 2019 *************/
+
+/************Phuoc - 15 03 2019 *************/
+/*Interrupt
+	Code chạy được, nhưng chưa khoa học lắm. Những dòng if else hơi chuối.
+	Nên dùng kiểu như: if a == 0: led 1 sang
+						else: led 1 tat
+					   if b == 0: led 2 sang
+					   else: led 2 tat.
+	Hoặc dùng switch case nhìn cho chuyên nghiệp
+						
+
+/************Phuoc - 15 03 2019 *************/
