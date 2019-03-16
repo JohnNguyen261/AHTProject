@@ -7,6 +7,7 @@
 #include "stm32f4xx_tim.h"
 
 int soLanNhan = 0;
+int lanNhanCu = 0;
 int thoiGianBatDau = 0;
 int thoiGianA = 0;
 int thoiGianB = 0;
@@ -104,6 +105,17 @@ void Configure_PA6(void)
 	GPIO_SetBits(GPIOA,GPIO_Pin_7);
 }
 
+void Configure_PE3(void)
+{
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_Init(GPIOE,&GPIO_InitStructure);
+}
+
 void Configure_PE4(void) {
     /* Set variables used */
     GPIO_InitTypeDef GPIO_InitStruct;
@@ -159,26 +171,28 @@ void TIM2_IRQHandler(void) {
 }
 
 int xuLyNutNhan(void){
-	//Bat dau dem thoi gian
-	//Neu thoi gian cho chua het thi van doi nhan
-	//Neu da het thi setup trang thai
-	
 	int ret_val = 0;
-	thoiGianCu = miliGiay;
-	while(miliGiay - thoiGianCu < 2000){
-		if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_4) == 0){
-			while(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_4) == 0){}
-			soLanNhan++;
-			thoiGianCu = miliGiay;
+
+	if(soLanNhan != 0){
+		thoiGianCu = miliGiay;
+		lanNhanCu = soLanNhan;
+		while(miliGiay - thoiGianCu < 2000){
+			if(lanNhanCu != soLanNhan){
+				thoiGianCu = miliGiay;
+				lanNhanCu = soLanNhan;
+			}
 		}
+		soLanNhan = 0;
 	}
-	if(soLanNhan == 2){
+
+	if(lanNhanCu == 2){
 		ret_val = 1;
+		
 	}
-	else if(soLanNhan >=3 && soLanNhan <=5){
+	else if(lanNhanCu >=3 && lanNhanCu <=5){
 		ret_val = 2;
 	}
-	else if(soLanNhan >5){
+	else if(lanNhanCu >5){
 		ret_val = 3;
 	}
 	return ret_val;
@@ -187,9 +201,10 @@ int xuLyNutNhan(void){
 void EXTI4_IRQHandler(void) {
     /* Make sure that interrupt flag is set */
     if (EXTI_GetITStatus(EXTI_Line4) != RESET) {
-        /* Do your stuff when PD0 is changed */
-				chuongTrinhLed = xuLyNutNhan();
-        /* Clear interrupt flag */
+        if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_4) == 0){
+					while(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_4) == 0){}
+					soLanNhan++;
+				}
         EXTI_ClearITPendingBit(EXTI_Line4);
     }
 }
@@ -203,10 +218,11 @@ int main(){
 	Configure_Timer2();
 	Configure_PA6();
 	Configure_PE4();
+	Configure_PE3();
 	
-	
-	while(1){
-		
+	while(1)
+	{
+		chuongTrinhLed = xuLyNutNhan();
 		if(chuongTrinhLed == 1){
 			GPIO_SetBits(GPIOA,GPIO_Pin_7);
 			GPIO_SetBits(GPIOA,GPIO_Pin_6);
@@ -224,10 +240,20 @@ int main(){
 		else if(chuongTrinhLed == 3){
 			GPIO_SetBits(GPIOA,GPIO_Pin_6);
 			GPIO_SetBits(GPIOA,GPIO_Pin_7);
-			delay_ms(500);
+			delay_ms(1000);
 			GPIO_ResetBits(GPIOA,GPIO_Pin_6);
 			GPIO_ResetBits(GPIOA,GPIO_Pin_7);
-			delay_ms(500);
+			delay_ms(1000);
 		}
+		else
+		{
+			GPIO_SetBits(GPIOA,GPIO_Pin_6);
+			GPIO_SetBits(GPIOA,GPIO_Pin_7);
+			delay_ms(200);
+			GPIO_ResetBits(GPIOA,GPIO_Pin_6);
+			GPIO_ResetBits(GPIOA,GPIO_Pin_7);
+			delay_ms(200);
+		}
+		
 	}
 }
