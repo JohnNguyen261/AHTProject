@@ -8,3 +8,17 @@
 	Goodluck
 */
 /************Phuoc - 13 03 2019 *************/
+
+/************Phuoc - 18 03 2019 *************/
+/*Timer
+	Bài 1: Theo a đọc code thì bài này hoạt động chưa đúng
+	Tại sao lại cần tới 2 nút nhấn? 
+	Vào timer thì dem mặc định = 1. vậy vào timer làm gì?
+	Suy nghĩ lại đề bài để code cho đơn giản :D nên dùng 1 timer và 1 nút nhấn là xong bài 1
+	=> Sửa lại code nhé
+	Bài 2: A nghĩ logic code sai.
+	Suy nghĩ lại nha :D 
+		Gợi ý: bài 2 nên chọn 1 timer với chu kỳ 1ms. Sau đó cứ mỗi lần nhấn nút thì sẽ capture số ms đó 
+	=> Code lại
+*/
+/************Phuoc - 18 03 2019 *************/

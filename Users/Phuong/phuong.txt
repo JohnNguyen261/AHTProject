@@ -4,3 +4,14 @@
 	Code tốt. Có sự chủ động trong viết chương trình
 */
 /************Phuoc - 15 03 2019 *************/
+
+/************Phuoc - 18 03 2019 *************/
+/* 
+	Bài 1: Chưa đúng yêu cầu đề bài. Đề nghị code lại
+		Gợi ý:  Bài một là khi bắt đầu nhấn thì mới tính thời gian. Có nghĩa là khi bắt đầu nhấn thì timer mới được bật lên
+			Không phải là cứ mỗi (2s) check số lần nhấn của nút nhấn. Chi tiết ko biết thì inbox hỏi a
+	Bài 2: Vẫn chưa ổn
+		Lý do: Code xài được 1 lần. nhấn lần 2 là code không có tác dụng. Suy nghĩ cách code. và nên giới hạn tổng thời gian 3 lần nhấn là 10-20s
+			để tối ưu hóa code. Thêm trường hợp nếu 3 lần nhấn lớn hơn 10-20s thì cho led tắt hết. vv. Ý tưởng là của mình, cố gắng phát huy
+*/
+/************Phuoc - 18 03 2019 *************/

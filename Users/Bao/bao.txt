@@ -21,5 +21,20 @@ Anh chưa biết nó chạy được hay không nhưng anh có 1 số góp ý
 					   else: led 2 tat.
 	Hoặc dùng switch case nhìn cho chuyên nghiệp
 						
-
+*/
 /************Phuoc - 15 03 2019 *************/
+
+/************Phuoc - 18 03 2019 *************/
+/*Timer
+	Bài tập 1: Sai ý tưởng. code lại
+	Gợi ý: Đề bài yêu cầu là check số lần nhấn nút trong 3s. => Khi nhấn nút đầu tiên thì timer mới được đếm. Và sau 3s vào timer mới đếm tổng số
+			lần nhấn nút. Cần thêm thông tin thì inbox a
+			// Start TIM2
+			TIM_Cmd(TIM2, ENABLE);  //Dùng hàm này để start timer
+			Tại sao lại dùng interrupt ngắt cả 2 cạnh lên và xuống?
+	Đọc code: A nghĩ bài này chạy không đúng. 
+	Bài tập 2: E 
+		Tại sao lại dùng interrupt ngắt cả 2 cạnh lên và xuống?
+		Code hơi rắc rối. Nên clear lại. Và code lại là hay nhất. goodluck e
+*/
+/************Phuoc - 18 03 2019 *************/

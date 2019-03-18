@@ -10,3 +10,14 @@
 	Còn lại OK
 */
 /************Phuoc - 15 03 2019 *************/
+
+/************Phuoc - 18 03 2019 *************/
+/* Timer
+	Bài tập 1: A không biết code này chạy được không. Tuy nhiên a có 1 vài góp ý
+		Dùng timer2 làm timer đếm thời gian. Tuy nhiên khi config lần đầu vẫn bật lên => trong 2s đầu nếu bấm thì chắc chắn code sai
+		//else if((count>2) && (count<6)) led2=1;
+		//else if(count >5) { led1=1; led2=1;	}	ít ai code kiểu này. Thường người khác sẽ code từ 2 -> <=5 và  cái còn lại >5
+		Có ý tưởng nhưng code chưa tối ưu. Suy nghĩ thêm cho code smooth
+	Bài tập 2: Không thấy đâu.
+*/
+/************Phuoc - 18 03 2019 *************/
