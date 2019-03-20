@@ -1,0 +1,16 @@
+--cpu Cortex-M4.fp
+"..\output\delay.o"
+"..\output\main.o"
+"..\output\misc.o"
+"..\output\stm32f4xx_exti.o"
+"..\output\stm32f4xx_gpio.o"
+"..\output\stm32f4xx_rcc.o"
+"..\output\stm32f4xx_syscfg.o"
+"..\output\stm32f4xx_tim.o"
+"..\output\stm32f4xx_flash.o"
+"..\output\startup_stm32f407xx.o"
+"..\output\system_stm32f4xx.o"
+--strict --scatter "..\Output\Timer.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Timer.map" -o ..\Output\Timer.axf
