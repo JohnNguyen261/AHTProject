@@ -1,0 +1,17 @@
+--cpu Cortex-M4.fp
+".\objects\delay.o"
+".\objects\main.o"
+".\objects\misc.o"
+".\objects\stm32f4xx_exti.o"
+".\objects\stm32f4xx_flash.o"
+".\objects\stm32f4xx_gpio.o"
+".\objects\stm32f4xx_rcc.o"
+".\objects\stm32f4xx_sdio.o"
+".\objects\stm32f4xx_syscfg.o"
+".\objects\stm32f4xx_tim.o"
+".\objects\startup_stm32f407xx.o"
+".\objects\system_stm32f4xx.o"
+--strict --scatter ".\Objects\BT3.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\BT3.map" -o .\Objects\BT3.axf
