@@ -1,6 +1,7 @@
 --cpu Cortex-M4.fp
 ".\objects\delay.o"
 ".\objects\main.o"
+".\objects\clock.o"
 ".\objects\misc.o"
 ".\objects\stm32f4xx_exti.o"
 ".\objects\stm32f4xx_flash.o"

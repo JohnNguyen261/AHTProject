@@ -1,6 +1,5 @@
 .\objects\main.o: src\main.c
-.\objects\main.o: .\inc\delay.h
-.\objects\main.o: ..\STM32F4xx_StdPeriph_Driver\STM32F4xx.h
+.\objects\main.o: ..\STM32F4xx_StdPeriph_Driver\stm32f4xx.h
 .\objects\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm4.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h
@@ -36,3 +35,5 @@
 .\objects\main.o: ..\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h
 .\objects\main.o: ..\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h
 .\objects\main.o: ..\STM32F4xx_StdPeriph_Driver\inc\misc.h
+.\objects\main.o: ..\clock\clock.h
+.\objects\main.o: .\inc\delay.h

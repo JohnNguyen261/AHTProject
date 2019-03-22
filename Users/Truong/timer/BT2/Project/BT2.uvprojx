@@ -334,7 +334,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F4XX,HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>.\src;.\inc;.\RTE\Device\STM32F407VETx;..\STM32F4xx_StdPeriph_Driver\inc;..\STM32F4xx_StdPeriph_Driver\src;..\STM32F4xx_StdPeriph_Driver</IncludePath>
+              <IncludePath>.\src;.\inc;.\RTE\Device\STM32F407VETx;..\STM32F4xx_StdPeriph_Driver\inc;..\STM32F4xx_StdPeriph_Driver\src;..\STM32F4xx_StdPeriph_Driver;..\clock</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -387,6 +387,16 @@
               <FileType>1</FileType>
               <FilePath>.\src\main.c</FilePath>
             </File>
+            <File>
+              <FileName>clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\clock\clock.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\timer\timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -396,6 +406,16 @@
               <FileName>delay.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\inc\delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>clock.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\clock\clock.h</FilePath>
+            </File>
+            <File>
+              <FileName>timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\timer\timer.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -2,22 +2,26 @@
 #include "stm32f4xx.h"
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
-#include "stm32f4xx_tim.c"
 #include "misc.h"
 #include "clock.h"
 #include "delay.h"
 #include "stm32f4xx_tim.h"
 #include "stm32f4xx_rcc.h"
-
+char str1[15]="RCC_APB1Periph_";
+char str2[5]="_IRQn";
+char tim2[4]="TIM2";
+char tim3[4]="TIM3";
+char tim4[4]="TIM4";
+char tim5[4]="TIM5";
 u16 Period, Prescaler;
-void set_timer(uint16_t *timerx, uint16_t time)
+void setup_timer(u16 *TIMx, uint16_t time)
 {
 	Period=21000;
 	Prescaler=(84000*time)/21000;
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;
 	NVIC_InitTypeDef NVIC_InitStructure;
 	
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIMx,ENABLE); 
+	RCC_APB1PeriphClockCmd(if(),ENABLE); 
 	
 	TIM_TimeBaseInitStructure.TIM_Period = 21000; 	
 	TIM_TimeBaseInitStructure.TIM_Prescaler= Prescaler;  
@@ -25,7 +29,7 @@ void set_timer(uint16_t *timerx, uint16_t time)
 	TIM_TimeBaseInitStructure.TIM_CounterMode=TIM_CounterMode_Up; 
 	TIM_TimeBaseInitStructure.TIM_ClockDivision=TIM_CKD_DIV1; 
 	
-	TIM_TimeBaseInit(TIM_TypeDef* TIMx,&TIM_TimeBaseInitStructure);
+	TIM_TimeBaseInit(,&TIM_TimeBaseInitStructure);
 	
 	TIM_ITConfig(TIMx,TIM_IT_Update,ENABLE); 
 	TIM_Cmd(TIMx,DISABLE); 
