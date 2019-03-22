@@ -9,6 +9,7 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625B160)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625B160)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmSimd.h)(0x5625B160)
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5822DB7A)
+<<<<<<< HEAD
 I (.\NewProject\STM32F4xx_StdPeriph_Driver\stm32f4xx_conf.h)(0x5C8DBD07)
 I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5C8DBD06)
 I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5C8DBD06)
@@ -45,6 +46,44 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625B160)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625B160)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625B160)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmSimd.h)(0x5625B160)
+=======
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\stm32f4xx_conf.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5C813D12)
+F (.\NewProject\Project\src\main.c)(0x5C8F94B5)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\NewProject\STM32F4xx_StdPeriph_Driver\inc -I .\NewProject\Project\inc -I .\NewProject\STM32F4xx_StdPeriph_Driver-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DHSE_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\NewProject\Project\inc\delay.h)(0x5C813D12)
+I (.\NewProject\STM32F4xx_StdPeriph_Driver\STM32F4xx.h)(0x5C813D12)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\CMSIS\Include\core_cm4.h)(0x59841BD6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B9154)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\CMSIS\Include\cmsis_version.h)(0x59841BD6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\CMSIS\Include\cmsis_compiler.h)(0x59841BD6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\CMSIS\Include\cmsis_armcc.h)(0x59841BD6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\CMSIS\Include\mpu_armv7.h)(0x59841BD6)
+>>>>>>> 0460b8f5dfa38b907566acc9d7a600a27e365e58
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5822DB7A)
 I (.\NewProject\STM32F4xx_StdPeriph_Driver\stm32f4xx_conf.h)(0x5C8DBD07)
 I (.\NewProject\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5C8DBD06)
