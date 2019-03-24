@@ -1,8 +1,16 @@
+
+
+
+
+
 /**
 * @NORMAL PRESS: increase or decrease brightness
 * @HOLD PRESS: increase or decrease brightness
 * @DOUBLE PRESS: reverse   (2 press on 300ms)
 */
+
+
+
 
 #include "stm32f4xx.h"
 #include "stm32f4xx_exti.h"
