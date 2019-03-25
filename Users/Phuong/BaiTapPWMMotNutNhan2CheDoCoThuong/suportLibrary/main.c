@@ -20,6 +20,8 @@ int i = 0;
 
 uint16_t statusButton = 0;
 
+int Level,LevelPWM;
+
 void EXTI4_IRQHandler(void) 
 {
 	if (EXTI_GetITStatus(EXTI_Line4) != RESET) 
@@ -48,6 +50,26 @@ void TIM5_IRQHandler(void)
 	}
 }
 
+void TroChoiPowerLed(int Level, int LevelPWM)
+{
+	if(Level >= (LevelPWM - 10) && Level <= (LevelPWM + 10))
+	{
+		for(int i=0;i<10;i++)
+		{
+			GPIO_ToggleBits(GPIOA,GPIO_Pin_7);
+			delay_ms_timer2(200);
+		}
+	}
+	else
+	{
+		for(int i=0;i<5;i++)
+		{
+			GPIO_ToggleBits(GPIOA,GPIO_Pin_7);
+			delay_ms_timer2(1000);
+		}
+	}
+}
+
 void ProgramLedPWM(uint16_t * statusButton)
 {
 	if(*statusButton == 1)
@@ -55,21 +77,23 @@ void ProgramLedPWM(uint16_t * statusButton)
 		delay_ms_timer2(200);
 		if(*statusButton == 1)
 		{
+			LevelPWM = 0;
+			int StatusAmDuong = 1;
 			while(*statusButton == 1)
 			{
-				for(int i=0;i<100 && *statusButton == 1;i++)
+				SetCompare_A6(LevelPWM);
+				delay_ms_timer2(10);
+				if(LevelPWM > 100)
 				{
-					SetCompare_A6(i);
-					SetCompare_A7(i);
-					delay_ms_timer2(10);
+					StatusAmDuong = -1;
 				}
-				for(int i=100;i>0 && *statusButton == 1;i--)
+				if(LevelPWM < 0)
 				{
-					SetCompare_A6(i);
-					SetCompare_A7(i);
-					delay_ms_timer2(10);
+					StatusAmDuong = 1;
 				}
+				LevelPWM = StatusAmDuong + LevelPWM;
 			}
+			TroChoiPowerLed(numberPress*25,LevelPWM);
 		}
 		else
 		{
@@ -79,20 +103,19 @@ void ProgramLedPWM(uint16_t * statusButton)
 				numberPress = 0;
 			}
 		}
-		
-		
 	}
 }
+
 int main(void)
 {
 	init_Clock();
 	configDelayTimer2();
 	configGpioE4HaveIRQ();
-	configGpioE3HaveIRQ();
 	configTimer5(420,200);
 	startTimer(TIM5);
+	configGPIO(GPIOA,GPIO_Pin_7,GPIO_Mode_OUT);
+	GPIO_SetBits(GPIOA,GPIO_Pin_7);
 	configPWM_A6();
-	configPWM_A7();
 
 	while(1)
 	{
