@@ -3,11 +3,7 @@
 <title>Static Call Graph - [.\Objects\LuckyProject.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\LuckyProject.axf</H1><HR>
-<<<<<<< HEAD
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Mar 25 16:29:54 2019
-=======
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060183: Last Updated: Sun Mar 24 14:55:12 2019
->>>>>>> be5fd579810d72bab3fae81be6976c9a5349c149
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Mar 25 16:36:13 2019
 <BR><P>
 <H3>Maximum Stack Usage =         80 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -872,9 +868,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configPWMChannel1
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configGpioE4HaveIRQ
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configPWMChannel1
 </UL>
 
 <P><STRONG><a name="[8f]"></a>configGpioE4HaveIRQ</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, configgpio.o(i.configGpioE4HaveIRQ))
@@ -907,11 +903,11 @@ Global Symbols
 <P><STRONG><a name="[92]"></a>configPWMChannel1</STRONG> (Thumb, 210 bytes, Stack size 24 bytes, configpwm.o(i.configPWMChannel1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = configPWMChannel1 &rArr; setUpPWMChannel1 &rArr; TIM_OC1Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setUpTimer
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setUpPWMChannel1
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setUpTimer
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startTimer
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configGPIO
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setUpPWMChannel1
 </UL>
 <BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configPWM_A6
 </UL>
@@ -993,9 +989,9 @@ Global Symbols
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITConfig
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configTimer5
+<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configPWMChannel1
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configTimer5
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configDelayTimer2
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configPWMChannel1
 </UL>
 
 <P><STRONG><a name="[87]"></a>startTimer</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, timer.o(i.startTimer))
@@ -1003,9 +999,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configDelayTimer2
+<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configPWMChannel1
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configDelayTimer2
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configPWMChannel1
 </UL>
 
 <P><STRONG><a name="[67]"></a>_fp_init</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, fpinit.o(x$fpl$fpinit))
