@@ -36,6 +36,7 @@ void TM_PWM_Init(void)
 	TIM_OCStruct.TIM_OCMode = TIM_OCMode_PWM1;
 	TIM_OCStruct.TIM_OutputState = TIM_OutputState_Enable;
 	TIM_OCStruct.TIM_OCPolarity = TIM_OCPolarity_Low;
+	
 	TIM_OCStruct.TIM_Pulse = 99; /* 25% duty cycle */
 	TIM_OC1Init(TIM3, &TIM_OCStruct);
 	TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
@@ -65,45 +66,9 @@ void TM_LEDS_Init(void)
 }
 
 
-void EXTI3_IRQHandler(void) 
-{
-	if (EXTI_GetITStatus(EXTI_Line3) != RESET) {
-			//Doing somethings
-			numberPress++;
-			EXTI_ClearITPendingBit(EXTI_Line3);
-	}
-}
-
-void TIM5_IRQHandler(void) 
-{
-	if(TIM_GetITStatus(TIM5,TIM_IT_Update) != RESET){
-		//Doing somethings
-		miliSecondTimer5++;
-		TIM_ClearFlag(TIM5,TIM_FLAG_Update);
-	}
-}
 
 
-void EXTI4_IRQHandler(void) 
-{
-	if (EXTI_GetITStatus(EXTI_Line4) != RESET) {
-			//Doing somethings
-			miliSecondTimer5 = 0;
-			if(GPIO_ReadBit(GPIOE,GPIO_Pin_4) == 0)
-			{
-				startTimer(TIM5);
-				while(GPIO_ReadBit(GPIOE,GPIO_Pin_4) == 0)
-				{
-					TIM5_IRQHandler();
-				}
-				stopTimer(TIM5);
-				if(miliSecondTimer5 >= 4000){
-					chuongTrinhLed = 4;
-				}
-			}
-			EXTI_ClearITPendingBit(EXTI_Line4);
-	}
-}
+
 
 int main(void)
 {
@@ -121,14 +86,14 @@ int main(void)
 		{
 			TIM_SetCompare1(TIM3,i);
 			TIM_SetCompare2(TIM3,i);
-			delay_ms_timer2(20);
+			delay_ms_timer2(100);
 		}
 		
 		for(i=100;i>0;i--)
 		{
 			TIM_SetCompare1(TIM3,i);
 			TIM_SetCompare2(TIM3,i);
-			delay_ms_timer2(20);
+			delay_ms_timer2(200);
 		}
 	}
 }

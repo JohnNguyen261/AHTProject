@@ -18,10 +18,10 @@ void gpio_config(void) {
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
  
     /* Alternating functions for pins */
-    GPIO_PinAFConfig(GPIOA, GPIO_PinSource1, GPIO_AF_TIM5);
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_TIM3);
   
     /* Set pins */
-    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_1;
+    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_6;
     GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
     GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
@@ -33,7 +33,7 @@ void timer_config(void) {
     TIM_TimeBaseInitTypeDef TIM_BaseStruct;
     
     /* Enable clock for TIM4 */
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM5, ENABLE);
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 /*    
     TIM4 is connected to APB1 bus, which has on F407 device 42MHz clock                 
     But, timer has internal PLL, which double this frequency for timer, up to 84MHz     
@@ -77,9 +77,9 @@ void timer_config(void) {
     TIM_BaseStruct.TIM_ClockDivision = TIM_CKD_DIV1;
     TIM_BaseStruct.TIM_RepetitionCounter = 0;
     /* Initialize TIM4 */
-    TIM_TimeBaseInit(TIM5, &TIM_BaseStruct);
+    TIM_TimeBaseInit(TIM3, &TIM_BaseStruct);
     /* Start count on TIM4 */
-    TIM_Cmd(TIM5, ENABLE);
+    TIM_Cmd(TIM3, ENABLE);
 }
 
 void pwm_config(void) {
@@ -112,8 +112,8 @@ void pwm_config(void) {
 //    TIM_OC1PreloadConfig(TIM4, TIM_OCPreload_Enable);						
 //    
     TIM_OCStruct.TIM_Pulse = 0; /* 50% duty cycle */
-    TIM_OC2Init(TIM5, &TIM_OCStruct);
-    TIM_OC2PreloadConfig(TIM5, TIM_OCPreload_Enable);
+    TIM_OC2Init(TIM3, &TIM_OCStruct);
+    TIM_OC2PreloadConfig(TIM3, TIM_OCPreload_Enable);
     
 //    TIM_OCStruct.TIM_Pulse = 6299; /* 75% duty cycle */
 //    TIM_OC3Init(TIM4, &TIM_OCStruct);
@@ -180,11 +180,11 @@ int main(void)
 	
 	while(1){	
 		for(duty=0;duty<0x2134;duty++){					//0x2134 value for min brigtness
-			TIM5->CCR2 = duty;
+			TIM3->CCR1 = duty;
 			delay_ms(1);
 		}
 		for(duty=0x2134;duty>0;duty--){
-			TIM5->CCR2 = duty;
+			TIM3->CCR1 = duty;
 			delay_ms(1);
 		}
 	}
