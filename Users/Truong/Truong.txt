@@ -23,4 +23,8 @@
 */
 /************Phuoc - 18 03 2019 *************/
 
-Chạy 100% roi a
+*********************************************
+Giao tiếp module sim800a vs stm32f407ve qua UART
+Yêu cầu: Khi gọi điện đến số điện thoại gắn trên sim thì 2led trên kit stm32f407 sẽ chớp tắt, Terminal hiện số báo có cuộc gọi
+Hardware: module sim800a
+Software: xử lý chuỗi giao tiếp qua UART.

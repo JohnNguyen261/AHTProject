@@ -7,13 +7,14 @@
 #define KEY_NO_PRESS 0 //key not pressed
 #define KEY_SHORT_PRESS 2 //key pressed short
 #define KEY_LONG_PRESS 3 //key pressed long
-#define KEY_DURATION 300 //cycle count, minimum threshold to test for long presses
+#define KEY_DURATION 200 //cycle count, minimum threshold to test for long presses
 
 u32 nhangiu=0, nhannha=0, duty=0;
 u32 i=0, time=0, solannhan=0,k=5;
 u32 status=0,TT=0, press=1, hold=2, count=0,solanngat=0;
 
 unsigned char key_read()  {
+		unsigned char count=0;
  if (status != KEY_PRESSED) return KEY_NO_PRESS; //key not pressed
  //key is pressed
  while (status == KEY_PRESSED) count+=1; //increment count if key is continuously pressed
@@ -215,6 +216,7 @@ void EXTI3_IRQHandler(void) {
 				status=0;
 				}
 			else status =1;
+//				key_read();
     }
 		EXTI_ClearITPendingBit(EXTI_Line3);
 }
@@ -259,11 +261,12 @@ int main(){
 	TIM2_INT_Init();
 	TIM3_INT_Init();
 	TM_PWM_Init();
-	key_read();
+	
 	while(1)
 	{
-		if(KEY_LONG_PRESS)
-		{
+//		unsigned char TT = key_read();
+//		if(TT == KEY_LONG_PRESS)
+//		{
 				for(int i=0;i<1000 && status == 1;i++)
 				{
 					TIM3->CCR1 = i;
@@ -276,17 +279,17 @@ int main(){
 				}
 			
 				//delay_ms(10);
-		}
-		if(KEY_SHORT_PRESS)
-		{
-			solannhan=solanngat/2;
-			duty=solannhan*249;
-			if(solannhan>4)
-			{
-				solannhan=0;
-				solanngat=0;
-			}
-			TIM3->CCR1 = duty;
-		}
+//		}
+//		if(TT == KEY_SHORT_PRESS)
+//		{
+//			solannhan=solanngat/2;
+//			duty=solannhan*249;
+//			if(solannhan>4)
+//			{
+//				solannhan=0;
+//				solanngat=0;
+//			}
+//			TIM3->CCR1 = duty;
+//		}
 	}
 }

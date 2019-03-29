@@ -3,6 +3,8 @@
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_usart.h"
+
+
 u32 step=1999;
 unsigned int duty=0;
 void USART_Config(void)
@@ -183,7 +185,6 @@ int main(void)
 
     // Send "Hello, World!" to PC
     USART_PutString("Hello, World!\n");
-		
     while (1)
     {
         // Get a char from PC
