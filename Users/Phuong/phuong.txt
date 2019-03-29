@@ -1,3 +1,5 @@
 ﻿De tai project:
 Giao tiep voi modul ESP32
 -> project phai co day du cach chuc nang nhu NGAT,PWM,UART
+Phuong: Lam voi wifi
+Tam: Lam voi bluetooth
