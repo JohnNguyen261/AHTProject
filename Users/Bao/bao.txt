@@ -1,4 +1,4 @@
-/************Phuoc - 13 03 2019 *************/
+﻿/************Phuoc - 13 03 2019 *************/
 /*Note bài tập nút nhấn
 Anh chưa biết nó chạy được hay không nhưng anh có 1 số góp ý
 
@@ -38,3 +38,8 @@ Anh chưa biết nó chạy được hay không nhưng anh có 1 số góp ý
 		Code hơi rắc rối. Nên clear lại. Và code lại là hay nhất. goodluck e
 */
 /************Phuoc - 18 03 2019 *************/
+/*******************************************/
+kết nối mudule bluetooh 4.0 CC2541F256 qua giao tiếp uart
+yêu cầu: baath tắt  led qua điện thoại
+hardware: module bluetooh 4.0 CC2541F256
+software: phần mềm trên điện thoại 
